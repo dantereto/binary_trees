@@ -20,6 +20,7 @@
     {
       parent->right->parent = new;
       new->right = parent->right;
+      parent->right = new;
     }
   else
     {
