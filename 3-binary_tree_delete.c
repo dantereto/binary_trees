@@ -1,11 +1,10 @@
 #include "binary_trees.h"
 
- /**
- * binary_tree_node - function that creates a binary tree node
- * @parent: pointer to data structure binary_tree_t
- * @value: integer with binary tree node value
- * Return: return binary tree node
- */
+/**
+* binary_tree_delete - function that deletes a binary tree
+* @tree: pointer to data structure binary_tree_t
+* Return: return binary tree node
+*/
 
 void binary_tree_delete(binary_tree_t *tree)
 {
