@@ -18,5 +18,4 @@ return (left_side) + 1;
 }
 else
 return (right_side) + 1;
-return (0);
 }
