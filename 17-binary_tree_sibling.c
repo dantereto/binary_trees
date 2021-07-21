@@ -1,14 +1,18 @@
 #include "binary_trees.h"
 
- /**
- * binary_tree_node - function that creates a binary tree node
- * @parent: pointer to data structure binary_tree_t
- * @value: integer with binary tree node value
- * Return: return binary tree node
+/**
+ * binary_tree_sibling - function that finds the sibling of a node
+ * @node: is a pointer to the node to find the sibling
+ * Return: node of sibiling
  */
+
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-if (node == NULL || node->parent == NULL || node->parent->left == NULL || node->parent->right == NULL)
+	binary_tree_t *p = node->parent;
+	binary_tree_t *p_left = node->parent->left;
+	binary_tree_t *p_right = node->parent->right;
+
+if (node == NULL || p == NULL || p_left == NULL || p_right == NULL)
 return (NULL);
 if (node->parent->left->n == node->n)
 return (node->parent->right);
