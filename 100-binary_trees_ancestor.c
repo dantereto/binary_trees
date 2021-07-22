@@ -8,13 +8,19 @@
 
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	if (tree->parent == NULL || tree == NULL)
+	size_t cont = 0;
+
+	if (tree == NULL)
 	{
 		return (0);
 	}
-	return (binary_tree_depth(tree->parent) + 1);
+	while (tree->parent != NULL)
+	{
+		cont++;
+		tree = tree->parent;
+	}
+	return (cont);
 }
-
 
 /**
  * binary_trees_ancestor - finds the lowest common ancestor of two nodes
